@@ -1362,6 +1362,23 @@ nav a:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .integration-logos {
+        gap: 30px;
+        animation: scrollLogos 30s linear infinite;
+    }
+    
+    .logo-item {
+        height: 100px;
+        width: 200px;
+        padding: 20px;
+    }
+    
+    .logo-item img {
+        max-height: 80px;
+    }
+}
+
 /* Remove old integration banner styles */
 .integration-banner {
     display: none;
