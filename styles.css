@@ -1527,7 +1527,8 @@ nav a:hover {
 .reality-number {
     position: absolute;
     top: -15px;
-    left: -15px;
+    right: -15px;
+    left: auto;
     width: 36px;
     height: 36px;
     background: var(--primary-gradient);
@@ -1744,6 +1745,22 @@ nav a:hover {
     color: var(--text-color);
     font-weight: 400;
     margin-bottom: 0;
+}
+
+.assistant-info .fixes {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 8px;
+    color: var(--text-color);
+}
+
+.assistant-info .like-having {
+    color: var(--light-text);
+    font-weight: 400;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 2px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .assistant-feature {
