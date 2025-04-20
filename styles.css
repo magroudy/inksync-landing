@@ -1717,6 +1717,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    position: relative;
 }
 
 .assistant-info {
@@ -1777,10 +1778,6 @@ nav a:hover {
 /* Team specific styles - consolidated */
 .assistant-icon {
     font-size: 24px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
 }
 
 /* Finance team styles */
@@ -1789,7 +1786,7 @@ nav a:hover {
 }
 
 .finance-icon .assistant-icon {
-    background: var(--finance-gradient);
+    color: var(--finance-color);
 }
 
 .finance-item h3,
@@ -1814,7 +1811,7 @@ nav a:hover {
 }
 
 .ops-icon .assistant-icon {
-    background: var(--ops-gradient);
+    color: var(--ops-color);
 }
 
 .ops-item h3,
@@ -1839,7 +1836,7 @@ nav a:hover {
 }
 
 .commercial-icon .assistant-icon {
-    background: var(--commercial-gradient);
+    color: var(--commercial-color);
 }
 
 .commercial-item h3,
