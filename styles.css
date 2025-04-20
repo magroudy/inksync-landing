@@ -31,6 +31,9 @@
     --finance-color: #045E6C;
     --ops-color: #0F8A2C;
     --commercial-color: #7B1FA2;
+    --finance-bg-light: rgba(6, 166, 191, 0.15);
+    --ops-bg-light: rgba(52, 168, 83, 0.15);
+    --commercial-bg-light: rgba(156, 39, 176, 0.15);
 }
 
 * {
@@ -1665,11 +1668,6 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* LinkedIn-style assistant cards */
-.assistants-container {
-    display: none; /* Hide the old container */
-}
-
 /* Unified Card Layout */
 .assistant-unified-card {
     display: flex;
@@ -1769,7 +1767,6 @@ nav a:hover {
     inset: 0;
     border-radius: 20px;
     padding: 1px;
-    background: var(--primary-gradient);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -1777,16 +1774,22 @@ nav a:hover {
     pointer-events: none;
 }
 
-/* Finance team specific styles */
+/* Team specific styles - consolidated */
+.assistant-icon {
+    font-size: 24px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Finance team styles */
 .finance-icon {
-    background-color: rgba(6, 166, 191, 0.15) !important;
+    background-color: var(--finance-bg-light);
 }
 
 .finance-icon .assistant-icon {
     background: var(--finance-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .finance-item h3,
@@ -1805,16 +1808,13 @@ nav a:hover {
     background: var(--finance-gradient);
 }
 
-/* OPS team specific styles */
+/* OPS team styles */
 .ops-icon {
-    background-color: rgba(52, 168, 83, 0.15) !important;
+    background-color: var(--ops-bg-light);
 }
 
 .ops-icon .assistant-icon {
     background: var(--ops-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .ops-item h3,
@@ -1833,16 +1833,13 @@ nav a:hover {
     background: var(--ops-gradient);
 }
 
-/* Commercial team specific styles */
+/* Commercial team styles */
 .commercial-icon {
-    background-color: rgba(156, 39, 176, 0.15) !important;
+    background-color: var(--commercial-bg-light);
 }
 
 .commercial-icon .assistant-icon {
     background: var(--commercial-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .commercial-item h3,
@@ -1897,8 +1894,9 @@ nav a:hover {
     }
 }
 
-/* Remove the old styles that are no longer needed */
-.team-section, .team-title, .assistant-cards, .assistant-card.reality-card {
+/* Clean up old/unused styles */
+.team-section, .team-title, .assistant-cards, 
+.assistant-card.reality-card, .assistants-container {
     display: none;
 }
 
@@ -1949,9 +1947,4 @@ nav a:hover {
     font-size: 14px;
     font-weight: 300;
     font-style: italic;
-}
-
-.assistant-icon {
-    font-size: 24px;
-    color: transparent;
 } 
