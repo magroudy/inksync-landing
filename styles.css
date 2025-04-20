@@ -7,6 +7,9 @@
     --primary-gradient: linear-gradient(315deg, #06A6BF 0%, #000000 100%);
     --primary-gradient-hover: linear-gradient(315deg, #057A8C 0%, #000000 100%);
     --diagonal-gradient: linear-gradient(135deg, #111111 0%, #034A55 50%, #111111 100%);
+    --finance-gradient: linear-gradient(315deg, #06A6BF 0%, #000000 100%);
+    --ops-gradient: linear-gradient(315deg, #34A853 0%, #000000 100%);
+    --commercial-gradient: linear-gradient(315deg, #9C27B0 0%, #000000 100%);
     --secondary-color: #FFFFFF;
     --accent-color: #07C1DE;
     --finance-bg: #E6EEF2;
@@ -25,6 +28,9 @@
     --section-overlay: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
     --section-bg-opacity: 0.3;
     --section-bg-blur: 12px;
+    --finance-color: #045E6C;
+    --ops-color: #0F8A2C;
+    --commercial-color: #7B1FA2;
 }
 
 * {
@@ -386,9 +392,10 @@ nav a:hover {
 }
 
 .card:hover {
-    background: rgba(255, 255, 255, 0.6);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: var(--shadow-card-hover);
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-card);
+    transform: none;
 }
 
 .card-icon {
@@ -403,7 +410,7 @@ nav a:hover {
 }
 
 .card:hover .card-icon {
-    transform: scale(1.1);
+    transform: none;
 }
 
 .card h3 {
@@ -577,7 +584,7 @@ nav a:hover {
 
 .differentiators {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin: 0 auto;
     max-width: 1000px;
@@ -596,8 +603,10 @@ nav a:hover {
 }
 
 .differentiator:hover {
-    background: rgba(255, 255, 255, 0.85);
-    border-color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.85);
+    transform: none;
+    box-shadow: var(--shadow-card);
 }
 
 .differentiator-icon {
@@ -609,7 +618,7 @@ nav a:hover {
 }
 
 .differentiator:hover .differentiator-icon {
-    transform: scale(1.1);
+    transform: none !important;
 }
 
 .differentiator h3 {
@@ -693,8 +702,12 @@ nav a:hover {
 
 .process-step:hover .process-content {
     transform: none;
-    box-shadow: var(--shadow-card);
+    box-shadow: none;
     border-color: var(--gray-200);
+}
+
+.process-step:hover .process-icon {
+    transform: none;
 }
 
 .process-number {
@@ -733,16 +746,24 @@ nav a:hover {
 }
 
 .process-step:hover .process-icon {
-    transform: scale(1.1);
+    transform: none !important;
 }
 
 .process-step h3 {
     color: var(--primary-dark);
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 20px;
     white-space: normal;
     line-height: 1.3;
+}
+
+.process-step .day-subtitle {
+    color: var(--light-text);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    display: block;
 }
 
 .process-step p {
@@ -884,7 +905,10 @@ nav a:hover {
     font-weight: 500;
     margin-bottom: 12px;
     font-size: 14px;
-    color: var(--light-text);
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     position: relative;
 }
 
@@ -1437,7 +1461,8 @@ nav a:hover {
 .column:hover,
 .feature-image:hover,
 .hero-img:hover,
-.reality-card:hover {
+.reality-card:hover,
+.assistant-card.reality-card:hover {
     transform: none;
     box-shadow: var(--shadow-card);
 }
@@ -1482,19 +1507,18 @@ nav a:hover {
     min-width: 280px;
     max-width: 340px;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.5);
+    background: transparent;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--gray-200);
     position: relative;
     transition: var(--transition);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
 }
 
 .reality-card:hover {
-    background: rgba(255, 255, 255, 0.6);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: var(--shadow-card-hover);
+    background: transparent;
+    border-color: var(--gray-200);
+    transform: none;
+    box-shadow: var(--shadow-card);
 }
 
 .reality-number {
@@ -1538,6 +1562,11 @@ nav a:hover {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.reality-card:hover .reality-icon {
+    transform: none !important;
 }
 
 .reality-card h3 {
@@ -1624,4 +1653,305 @@ nav a:hover {
         width: 100%;
         margin: 0 !important;
     }
+}
+
+/* Assistant Teams Section */
+.assistant-teams {
+    padding: 120px 0;
+    background-color: var(--white);
+    position: relative;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+    overflow: hidden;
+}
+
+/* LinkedIn-style assistant cards */
+.assistants-container {
+    display: none; /* Hide the old container */
+}
+
+/* Unified Card Layout */
+.assistant-unified-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+}
+
+.assistant-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    transition: var(--transition);
+}
+
+.assistant-list-item:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.assistant-separator {
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0));
+    margin: 0 20px;
+}
+
+.assistant-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.assistant-icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.assistant-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.assistant-info h3 {
+    margin-bottom: 1px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.assistant-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.assistant-info p:not(.assistant-title) {
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.assistant-feature {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    position: relative;
+}
+
+.assistant-feature span {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.assistant-feature span::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: var(--primary-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Finance team specific styles */
+.finance-icon {
+    background-color: rgba(6, 166, 191, 0.15) !important;
+}
+
+.finance-icon .assistant-icon {
+    background: var(--finance-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.finance-item h3,
+.finance-item .assistant-title {
+    color: var(--finance-color);
+}
+
+.finance-feature span {
+    background: var(--finance-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.finance-feature span::before {
+    background: var(--finance-gradient);
+}
+
+/* OPS team specific styles */
+.ops-icon {
+    background-color: rgba(52, 168, 83, 0.15) !important;
+}
+
+.ops-icon .assistant-icon {
+    background: var(--ops-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ops-item h3,
+.ops-item .assistant-title {
+    color: var(--ops-color);
+}
+
+.ops-feature span {
+    background: var(--ops-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ops-feature span::before {
+    background: var(--ops-gradient);
+}
+
+/* Commercial team specific styles */
+.commercial-icon {
+    background-color: rgba(156, 39, 176, 0.15) !important;
+}
+
+.commercial-icon .assistant-icon {
+    background: var(--commercial-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.commercial-item h3,
+.commercial-item .assistant-title {
+    color: var(--commercial-color);
+}
+
+.commercial-feature span {
+    background: var(--commercial-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.commercial-feature span::before {
+    background: var(--commercial-gradient);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .assistant-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+    }
+    
+    .assistant-feature {
+        padding-left: 0;
+        width: 100%;
+    }
+    
+    .assistant-feature span {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .assistant-separator {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .assistant-profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .assistant-icon-container {
+        margin-bottom: 10px;
+    }
+}
+
+/* Remove the old styles that are no longer needed */
+.team-section, .team-title, .assistant-cards, .assistant-card.reality-card {
+    display: none;
+}
+
+/* Money Back Guarantee Banner */
+.money-back-banner {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 24px;
+    background: transparent;
+    border-radius: 16px;
+    text-align: center;
+    border: none;
+}
+
+.money-back-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: var(--white);
+    position: relative;
+}
+
+.money-back-badge i {
+    color: var(--white);
+    margin-right: 8px;
+}
+
+.money-back-badge::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 1px;
+    background: var(--primary-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.money-back-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.assistant-icon {
+    font-size: 24px;
+    color: transparent;
 } 
