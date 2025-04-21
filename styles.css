@@ -943,16 +943,9 @@ nav a:hover {
 
 @media (max-width: 768px) {
     .cta-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 30px;
-    }
-    
-    .cta-left {
-        order: 1;
-    }
-    
-    .cta-right {
-        order: 2;
     }
     
     .cta-content {
@@ -960,12 +953,22 @@ nav a:hover {
         margin: 0 20px;
     }
     
-    .cta h2, .cta .secondary-text {
+    .cta h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .cta .secondary-text {
         text-align: center;
     }
     
-    .cta-right, .cta-left {
+    .cta-left, .cta-right {
+        width: 100%;
         align-items: center;
+    }
+    
+    .cta-button {
+        max-width: 300px;
     }
 }
 
