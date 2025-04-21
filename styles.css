@@ -947,6 +947,14 @@ nav a:hover {
         gap: 30px;
     }
     
+    .cta-left {
+        order: 1;
+    }
+    
+    .cta-right {
+        order: 2;
+    }
+    
     .cta-content {
         padding: 40px 20px;
         margin: 0 20px;
