@@ -114,22 +114,60 @@ nav a:hover {
 /* Button Styles */
 .cta-button {
     padding: 10px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: none;
     border-radius: 10px;
     font-weight: 400;
     cursor: pointer;
     transition: var(--transition);
     font-size: 14px;
-    background: rgba(255, 255, 255, 0.5);
+    background: transparent;
     color: var(--text-color);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     text-decoration: none;
+    position: relative;
+    box-shadow: none;
+    z-index: 1;
+}
+
+/* Single 1px gradient border using background-origin and linear gradient */
+.cta-button::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 10px;
+    background: var(--primary-gradient);
+    z-index: -2;
+}
+
+.cta-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+.cta-button span {
+    position: relative;
+    z-index: 2;
 }
 
 .cta-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(0, 0, 0, 0.1);
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+.cta-button:hover::after {
+    background: var(--white);
 }
 
 .cta-button:hover span {
@@ -140,14 +178,47 @@ nav a:hover {
 }
 
 .cta-button.primary {
+    position: relative;
     background: var(--primary-gradient);
     color: var(--white);
     border: none;
+    box-shadow: none;
+    z-index: 1;
+}
+
+.cta-button.primary span {
+    color: var(--white);
+    position: relative;
+    z-index: 3;
+}
+
+.cta-button.primary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-gradient);
+    border-radius: 9px;
+    z-index: -1;
+    transition: var(--transition);
 }
 
 .cta-button.primary:hover {
-    background: var(--primary-gradient-hover);
-    transform: translateY(-1px);
+    background: transparent;
+}
+
+.cta-button.primary:hover::after {
+    background: var(--white);
+}
+
+.cta-button.primary:hover span {
+    background: var(--primary-gradient) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
 }
 
 /* Hero Section */
@@ -221,6 +292,15 @@ nav a:hover {
     width: fit-content;
     margin: 0 auto;
     padding: 10px 40px;
+}
+
+/* Add specific hero button hover style */
+.hero .cta-button.primary:hover span {
+    background: var(--primary-gradient) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
 }
 
 .metric {
@@ -901,7 +981,7 @@ nav a:hover {
 }
 
 .cta .cta-button {
-    background: var(--white);
+    background: transparent;
     color: var(--text-color);
     border: none;
     border-radius: 10px;
@@ -911,22 +991,50 @@ nav a:hover {
     text-align: center;
     margin-bottom: 8px;
     position: relative;
+    box-shadow: none;
+    z-index: 1;
+}
+
+.cta .cta-button::after {
+    background: var(--white);
 }
 
 .cta .cta-button span {
     color: var(--text-color);
     font-weight: 700;
+    position: relative;
+    z-index: 2;
 }
 
 .cta .cta-button:hover {
-    background: rgba(255, 255, 255, 0.9);
+    background: transparent;
+    box-shadow: none;
+}
+
+.cta .cta-button:hover::after {
+    background: var(--white);
 }
 
 .cta .cta-button:hover span {
+    background: var(--primary-gradient) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+}
+
+.cta .cta-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 1px;
     background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 .reassurance {
@@ -1500,17 +1608,6 @@ nav a:hover {
     box-shadow: var(--shadow-card);
 }
 
-/* Keep button hover effects */
-.cta-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(0, 0, 0, 0.1);
-}
-
-.cta-button.primary:hover {
-    background: var(--primary-gradient-hover);
-    transform: translateY(-1px);
-}
-
 /* New Reality Section */
 .reality-section {
     padding: 120px 0 0;
@@ -2076,4 +2173,25 @@ nav a:hover {
     .cta-button {
         max-width: 300px !important;
     }
+}
+
+/* Direct fix for hero primary button */
+section.hero a.cta-button.primary {
+    background: var(--primary-gradient);
+}
+
+section.hero a.cta-button.primary span {
+    color: white;
+}
+
+section.hero a.cta-button.primary:hover {
+    background: white;
+}
+
+section.hero a.cta-button.primary:hover span {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 } 
