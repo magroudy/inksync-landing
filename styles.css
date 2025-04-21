@@ -964,11 +964,9 @@ nav a:hover {
 /* Footer */
 .footer {
     padding: 60px 0 80px;
-    background-color: var(--gray-50);
+    background-color: #02323A;
     color: rgba(255, 255, 255, 0.7);
-    border-top: 1px solid var(--gray-200);
-    border-radius: 16px;
-    box-shadow: var(--shadow-card);
+    border-top: none;
 }
 
 .footer-content {
@@ -981,12 +979,12 @@ nav a:hover {
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: 600;
-    color: var(--primary-dark);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .footer-section p,
 .footer-section a {
-    color: var(--text-color);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     line-height: 1.3;
     font-weight: 300;
@@ -1000,12 +998,12 @@ nav a:hover {
 }
 
 .footer-section a:hover {
-    color: var(--primary-color);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .copyright {
     margin-top: 40px;
-    color: var(--light-text);
+    color: rgba(255, 255, 255, 0.4);
     font-size: 14px;
     font-weight: 300;
 }
