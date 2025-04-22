@@ -2173,6 +2173,78 @@ section.hero a.cta-button.primary:hover span {
     .section-subtitle {
         margin-bottom: 30px !important;
     }
+    
+    .assistant-unified-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .assistant-list-item {
+        min-height: auto;
+    }
+    
+    .assistant-info {
+        min-height: auto;
+    }
+    
+    .assistant-info p {
+        max-width: 100%;
+    }
+    
+    .reality-workflow {
+        gap: 15px;
+    }
+    
+    .reality-content {
+        flex-direction: column;
+    }
+    
+    .reality-icon-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+        align-self: center;
+    }
+    
+    .reality-text-content {
+        text-align: center;
+    }
+    
+    .reality-timeline {
+        margin-top: 10px;
+    }
+    
+    .reality-arrow {
+        height: 20px;
+        margin: -5px 0;
+    }
+    
+    .process-step {
+        padding-left: 60px;
+    }
+    
+    .process-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .process-timeline-line {
+        left: 22px;
+    }
+    
+    .process-text-content h3 {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .dot-separator {
+        display: none;
+    }
+    
+    .timeline-phase {
+        margin-top: 5px;
+        font-size: 14px;
+    }
 }
 
 /* Fix for newly positioned like-having text */
