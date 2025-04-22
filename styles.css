@@ -804,7 +804,7 @@ nav a:hover {
     border-radius: 0;
     box-shadow: none;
     border: none;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .process-icon {
@@ -914,7 +914,7 @@ nav a:hover {
 }
 
 .process-result {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .process-result span {
@@ -1289,6 +1289,28 @@ nav a:hover {
     
     .step {
         margin-left: 12px;
+    }
+
+    .reality-workflow {
+        gap: 10px;
+    }
+    
+    .reality-arrow {
+        height: 15px;
+        margin: -8px 0; 
+    }
+    
+    .process-step {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .process-content {
+        margin-top: 5px;
+    }
+    
+    .process-result {
+        margin-top: 5px;
     }
 }
 
@@ -1675,6 +1697,7 @@ nav a:hover {
 .assistant-card.reality-card:hover {
     transform: none;
     box-shadow: var(--shadow-card);
+    border-color: var(--gray-200);
 }
 
 /* New Reality Section */
@@ -1694,7 +1717,7 @@ nav a:hover {
 .reality-workflow {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     max-width: 800px;
     margin: 0 auto 40px;
 }
@@ -1770,8 +1793,8 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
-    margin: -10px 0;
+    height: 20px;
+    margin: -5px 0;
 }
 
 .reality-arrow i {
@@ -2192,7 +2215,7 @@ section.hero a.cta-button.primary:hover span {
     }
     
     .reality-workflow {
-        gap: 15px;
+        gap: 10px;
     }
     
     .reality-content {
@@ -2214,8 +2237,8 @@ section.hero a.cta-button.primary:hover span {
     }
     
     .reality-arrow {
-        height: 20px;
-        margin: -5px 0;
+        height: 15px;
+        margin: -8px 0;
     }
     
     .process-step {
@@ -2328,4 +2351,21 @@ section.hero a.cta-button.primary:hover span {
     font-style: normal;
     margin-top: 15px;
     text-align: center;
+}
+
+.process-step:hover,
+.process-icon:hover,
+.process-text-content:hover,
+.process-result:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.process {
+    margin-bottom: 20px;
+}
+
+.process-step {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
 } 
