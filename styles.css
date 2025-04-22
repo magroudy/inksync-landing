@@ -785,7 +785,7 @@ nav a:hover {
     position: relative;
     width: 100%;
     min-width: auto;
-    padding-left: 60px;
+    padding-left: 50px;
     margin-bottom: 10px;
     border-bottom: none;
     padding-bottom: 10px;
@@ -804,15 +804,16 @@ nav a:hover {
     border-radius: 0;
     box-shadow: none;
     border: none;
-    margin-top: 10px;
+    margin-top: 5px;
+    width: 100%;
 }
 
 .process-icon {
     position: absolute;
     left: 0;
     top: 10px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: var(--gray-100);
     border-radius: 50%;
     display: flex;
@@ -845,8 +846,8 @@ nav a:hover {
 .process-timeline-line {
     display: block;
     position: absolute;
-    left: 25px;
-    top: 60px;
+    left: 20px;
+    top: 50px;
     width: 2px;
     height: 100%;
     background: var(--gray-200);
@@ -881,6 +882,7 @@ nav a:hover {
 
 .process-text-content {
     flex: 1;
+    max-width: 100%;
 }
 
 .process-text-content h3 {
@@ -2242,16 +2244,16 @@ section.hero a.cta-button.primary:hover span {
     }
     
     .process-step {
-        padding-left: 60px;
+        padding-left: 50px;
     }
     
     .process-icon {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
     
     .process-timeline-line {
-        left: 22px;
+        left: 20px;
     }
     
     .process-text-content h3 {
@@ -2373,4 +2375,73 @@ section.hero a.cta-button.primary:hover span {
 /* Add specific styling for the "Send Your Data" card header */
 .connect-card .reality-text-content h3 {
     margin-bottom: 20px;
+}
+
+/* Reality card header spacing fix */
+.reality-card .reality-text-content h3 {
+    margin-bottom: 8px;
+}
+
+/* Process section layout improvements */
+.process {
+    padding: 30px;
+}
+
+.process-step {
+    position: relative;
+    width: 100%;
+    min-width: auto;
+    padding-left: 45px;
+    margin-bottom: 10px;
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+.process-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--gray-100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+    z-index: 2;
+}
+
+.process-timeline-line {
+    display: block;
+    position: absolute;
+    left: 18px;
+    top: 36px;
+    width: 2px;
+    height: 100%;
+    background: var(--gray-200);
+    z-index: 1;
+    opacity: 1;
+}
+
+.process-text-content {
+    flex: 1;
+    padding-right: 0;
+}
+
+@media (max-width: 768px) {
+    .process-step {
+        padding-left: 45px;
+    }
+    
+    .process-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .process-timeline-line {
+        left: 18px;
+        top: 36px;
+    }
 } 
