@@ -763,7 +763,7 @@ nav a:hover {
 
 /* How It Works Section */
 .how-it-works {
-    padding: 120px 0 80px;
+    padding: 120px 0 40px;
     background-color: var(--white);
     border-top: 1px solid var(--gray-200);
 }
@@ -964,7 +964,7 @@ nav a:hover {
 
 /* CTA Section */
 .cta {
-    padding: 0;
+    padding: 0 0 80px;
     position: relative;
     color: var(--white);
     background: linear-gradient(to bottom, var(--white) 75%, #02323A 25%);
