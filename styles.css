@@ -223,7 +223,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    padding: 160px 0 100px;
+    padding: 200px 0 100px;
     background-color: var(--gray-50);
     border-bottom: 1px solid var(--gray-200);
     position: relative;
@@ -1122,7 +1122,7 @@ nav a:hover {
 
 /* Footer */
 .footer {
-    padding: 60px 0 80px;
+    padding: 90px 0 80px;
     background-color: #02323A;
     color: rgba(255, 255, 255, 0.7);
     border-top: none;
