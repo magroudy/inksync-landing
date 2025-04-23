@@ -652,9 +652,34 @@ nav a:hover {
 /* Differentiation Section */
 .differentiation {
     padding: 120px 0;
-    background: var(--diagonal-gradient);
     color: var(--white);
     position: relative;
+    overflow: hidden;
+}
+
+.differentiation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/retail-background.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    z-index: -2;
+}
+
+.differentiation::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--diagonal-gradient);
+    z-index: -1;
 }
 
 .differentiation h2 {
