@@ -732,7 +732,7 @@ nav a:hover {
 
 /* How It Works Section */
 .how-it-works {
-    padding: 120px 0;
+    padding: 120px 0 80px;
     background-color: var(--white);
     border-top: 1px solid var(--gray-200);
 }
@@ -943,9 +943,9 @@ nav a:hover {
     background: var(--diagonal-gradient);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: 60px 40px;
+    padding: 60px 30px;
     border-radius: 24px;
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
