@@ -444,7 +444,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(50, 50, 50, 0.85), rgba(60, 60, 60, 0.8)), url('assets/why-assistants.jpeg');
+    background-image: linear-gradient(rgba(35, 45, 47, 0.8), rgba(234, 234, 234, 0.85)), url('assets/why-assistants.jpeg');
     background-size: cover;
     background-position: center;
     opacity: 0.45;
@@ -454,8 +454,7 @@ nav a:hover {
 
 /* Specific styling for Assistant Teams Section background */
 .assistant-teams .problem-background {
-    background-image: var(--section-overlay), url('assets/finance-background.avif');
-    opacity: var(--section-bg-opacity);
+    display: none;
 }
 
 .problem-exists .container {
@@ -763,7 +762,7 @@ nav a:hover {
 
 /* How It Works Section */
 .how-it-works {
-    padding: 120px 0 40px;
+    padding: 120px 0 20px;
     background-color: var(--white);
     border-top: 1px solid var(--gray-200);
 }
@@ -964,7 +963,7 @@ nav a:hover {
 
 /* CTA Section */
 .cta {
-    padding: 0 0 80px;
+    padding: 0 0 40px;
     position: relative;
     color: var(--white);
     background: linear-gradient(to bottom, var(--white) 75%, #02323A 25%);
@@ -2596,4 +2595,9 @@ section.hero a.cta-button.primary:hover span {
         min-width: 32px;
         margin-right: 14px;
     }
+}
+
+/* Add additional styles for assistant-teams section */
+.assistant-teams {
+    background-color: var(--white);
 } 
