@@ -159,6 +159,7 @@ nav a:hover {
 .cta-button span {
     position: relative;
     z-index: 2;
+    font-weight: 400;
 }
 
 .cta-button:hover {
@@ -192,7 +193,7 @@ nav a:hover {
     position: relative;
     z-index: 3;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .cta-button.primary::after {
@@ -223,7 +224,7 @@ nav a:hover {
     -webkit-text-fill-color: transparent !important;
     color: transparent !important;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* Hero Section */
@@ -309,7 +310,7 @@ nav a:hover {
     -webkit-text-fill-color: transparent !important;
     color: transparent !important;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .metric {
@@ -495,6 +496,9 @@ nav a:hover {
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
 }
 
 .card:hover {
@@ -506,13 +510,22 @@ nav a:hover {
 
 .card-icon {
     font-size: 24px;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary-dark);
     margin-bottom: 16px;
     display: block;
     transition: var(--transition);
+}
+
+.cards .card:nth-child(1) .card-icon {
+    color: var(--finance-color);
+}
+
+.cards .card:nth-child(2) .card-icon {
+    color: var(--ops-color);
+}
+
+.cards .card:nth-child(3) .card-icon {
+    color: var(--commercial-color);
 }
 
 .card:hover .card-icon {
@@ -526,12 +539,25 @@ nav a:hover {
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
 }
 
+.cards .card:nth-child(1) h3 {
+    color: var(--finance-color);
+}
+
+.cards .card:nth-child(2) h3 {
+    color: var(--ops-color);
+}
+
+.cards .card:nth-child(3) h3 {
+    color: var(--commercial-color);
+}
+
 .card p {
     font-size: 14px;
     line-height: 1.3;
     color: var(--text-color);
-    margin-bottom: 12px;
-    font-weight: 300;
+    margin-bottom: 20px;
+    font-weight: 200;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Problem Section */
@@ -762,7 +788,8 @@ nav a:hover {
     color: var(--text-color);
     margin: 0;
     margin-bottom: 12px;
-    font-weight: 300;
+    font-weight: 200;
+    font-family: 'Roboto Mono', monospace;
 }
 
 @media (max-width: 768px) {
@@ -888,12 +915,12 @@ nav a:hover {
 }
 
 .process-text-content p {
-    font-size: 16px;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.3;
     color: var(--text-color);
-    margin: 0;
-    margin-bottom: 15px;
-    font-weight: 300;
+    margin-bottom: 8px;
+    font-weight: 200;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .process-result {
@@ -1060,7 +1087,7 @@ nav a:hover {
 
 .cta .cta-button span {
     color: var(--text-color);
-    font-weight: 300;
+    font-weight: 400;
     position: relative;
     z-index: 2;
     font-family: 'Roboto Mono', monospace;
@@ -1082,7 +1109,7 @@ nav a:hover {
     -webkit-text-fill-color: transparent !important;
     color: transparent !important;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .cta .cta-button::before {
@@ -1539,7 +1566,8 @@ nav a:hover {
     line-height: 1.3;
     color: var(--text-color);
     margin-bottom: 12px;
-    font-weight: 300;
+    font-weight: 200;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .timeline-marker {
@@ -1817,6 +1845,15 @@ nav a:hover {
     -webkit-text-fill-color: transparent;
 }
 
+.reality-text-content p {
+    font-size: 14px;
+    line-height: 1.3;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-weight: 200;
+    font-family: 'Roboto Mono', monospace;
+}
+
 /* Assistant Teams Section */
 .assistant-teams {
     padding: 120px 0;
@@ -1851,6 +1888,8 @@ nav a:hover {
     height: 100%;
     width: 100%;
     flex: 1 0 0%;
+    position: relative;
+    overflow: visible;
 }
 
 .assistant-list-item:hover {
@@ -1891,10 +1930,11 @@ nav a:hover {
     font-size: 14px;
     line-height: 1.3;
     color: var(--text-color);
-    font-weight: 300;
+    font-weight: 200;
     margin-bottom: 0;
     text-align: center;
     max-width: 100%;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .assistant-feature {
@@ -2159,7 +2199,7 @@ section.hero a.cta-button.primary {
 section.hero a.cta-button.primary span {
     color: white;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 section.hero a.cta-button.primary:hover {
@@ -2173,7 +2213,7 @@ section.hero a.cta-button.primary:hover span {
     -webkit-text-fill-color: transparent;
     color: transparent;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* Additional fixes for consistent layout */
@@ -2301,12 +2341,14 @@ section.hero a.cta-button.primary:hover span {
     font-weight: 400;
     font-size: 14px;
     font-style: normal;
-    margin-top: 15px;
-    text-align: center;
+    margin-top: auto;
+    text-align: left;
     background: var(--primary-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-top: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Apply specific gradients to each card's like-having text based on position */
@@ -2316,6 +2358,8 @@ section.hero a.cta-button.primary:hover span {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 400;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
 }
 
 .cards .card:nth-child(2) .like-having {
@@ -2324,6 +2368,8 @@ section.hero a.cta-button.primary:hover span {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 400;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
 }
 
 .cards .card:nth-child(3) .like-having {
@@ -2332,6 +2378,30 @@ section.hero a.cta-button.primary:hover span {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 400;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Assistant section cards should have center alignment */
+.finance-item .like-having,
+.ops-item .like-having,
+.commercial-item .like-having {
+    background: var(--finance-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin-top: 15px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 0;
+    overflow: visible;
+    position: relative;
+    z-index: 5;
 }
 
 .finance-item .like-having {
@@ -2339,7 +2409,6 @@ section.hero a.cta-button.primary:hover span {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 400;
 }
 
 .ops-item .like-having {
@@ -2347,7 +2416,6 @@ section.hero a.cta-button.primary:hover span {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 400;
 }
 
 .commercial-item .like-having {
@@ -2355,7 +2423,6 @@ section.hero a.cta-button.primary:hover span {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 400;
 }
 
 /* Accelerator Program */
@@ -2403,8 +2470,8 @@ section.hero a.cta-button.primary:hover span {
     font-weight: 400;
     font-size: 14px;
     font-style: normal;
-    margin-top: 15px;
-    text-align: center;
+    margin-top: auto;
+    text-align: left;
 }
 
 .process-step:hover,
