@@ -116,7 +116,7 @@ nav a:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    font-weight: 700;
+    font-weight: 300;
     cursor: pointer;
     transition: var(--transition);
     font-size: 14px;
@@ -532,11 +532,6 @@ nav a:hover {
     color: var(--text-color);
     margin-bottom: 12px;
     font-weight: 300;
-}
-
-/* Add styling for reality-timeline inside cards */
-.card .reality-timeline {
-    margin-top: 15px;
 }
 
 /* Problem Section */
@@ -2303,11 +2298,37 @@ section.hero a.cta-button.primary:hover span {
 /* Fix for newly positioned like-having text */
 .like-having {
     color: var(--light-text);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     font-style: normal;
     margin-top: 15px;
     text-align: center;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Apply specific gradients to each card's like-having text based on position */
+.cards .card:nth-child(1) .like-having {
+    background: var(--finance-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cards .card:nth-child(2) .like-having {
+    background: var(--ops-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cards .card:nth-child(3) .like-having {
+    background: var(--commercial-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .finance-item .like-having {
