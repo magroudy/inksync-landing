@@ -534,16 +534,6 @@ nav a:hover {
     font-weight: 300;
 }
 
-.card .result {
-    color: var(--light-text);
-    font-weight: 400;
-    margin-top: 16px;
-    font-size: 14px;
-    font-style: italic;
-    padding-left: 4px;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
-}
-
 /* Problem Section */
 .problem {
     padding: 120px 0;
