@@ -193,7 +193,7 @@ nav a:hover {
     position: relative;
     z-index: 3;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .cta-button.primary::after {
@@ -224,7 +224,7 @@ nav a:hover {
     -webkit-text-fill-color: transparent !important;
     color: transparent !important;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 /* Hero Section */
@@ -310,7 +310,7 @@ nav a:hover {
     -webkit-text-fill-color: transparent !important;
     color: transparent !important;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .metric {
@@ -1109,7 +1109,7 @@ nav a:hover {
     -webkit-text-fill-color: transparent !important;
     color: transparent !important;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .cta .cta-button::before {
@@ -2199,7 +2199,7 @@ section.hero a.cta-button.primary {
 section.hero a.cta-button.primary span {
     color: white;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 section.hero a.cta-button.primary:hover {
@@ -2213,7 +2213,7 @@ section.hero a.cta-button.primary:hover span {
     -webkit-text-fill-color: transparent;
     color: transparent;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 /* Additional fixes for consistent layout */
