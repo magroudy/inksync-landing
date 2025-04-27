@@ -116,7 +116,7 @@ nav a:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    font-weight: 400;
+    font-weight: 300;
     cursor: pointer;
     transition: var(--transition);
     font-size: 14px;
@@ -128,6 +128,7 @@ nav a:hover {
     position: relative;
     box-shadow: none;
     z-index: 1;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Single 1px gradient border using background-origin and linear gradient */
@@ -190,6 +191,8 @@ nav a:hover {
     color: var(--white);
     position: relative;
     z-index: 3;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
 }
 
 .cta-button.primary::after {
@@ -219,6 +222,8 @@ nav a:hover {
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     color: transparent !important;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
 }
 
 /* Hero Section */
@@ -303,6 +308,8 @@ nav a:hover {
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     color: transparent !important;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
 }
 
 .metric {
@@ -1063,9 +1070,10 @@ nav a:hover {
 
 .cta .cta-button span {
     color: var(--text-color);
-    font-weight: 700;
+    font-weight: 300;
     position: relative;
     z-index: 2;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .cta .cta-button:hover {
@@ -1083,6 +1091,8 @@ nav a:hover {
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     color: transparent !important;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
 }
 
 .cta .cta-button::before {
@@ -2158,6 +2168,8 @@ section.hero a.cta-button.primary {
 
 section.hero a.cta-button.primary span {
     color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
 }
 
 section.hero a.cta-button.primary:hover {
@@ -2170,6 +2182,8 @@ section.hero a.cta-button.primary:hover span {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
 }
 
 /* Additional fixes for consistent layout */
