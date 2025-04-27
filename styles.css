@@ -2315,6 +2315,7 @@ section.hero a.cta-button.primary:hover span {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 450;
 }
 
 .cards .card:nth-child(2) .like-having {
@@ -2322,6 +2323,7 @@ section.hero a.cta-button.primary:hover span {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 450;
 }
 
 .cards .card:nth-child(3) .like-having {
@@ -2329,6 +2331,7 @@ section.hero a.cta-button.primary:hover span {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 450;
 }
 
 .finance-item .like-having {
