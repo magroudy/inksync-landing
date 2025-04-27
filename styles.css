@@ -158,7 +158,6 @@ nav a:hover {
 .cta-button span {
     position: relative;
     z-index: 2;
-    font-family: 'Roboto Mono', monospace;
 }
 
 .cta-button:hover {
@@ -191,7 +190,6 @@ nav a:hover {
     color: var(--white);
     position: relative;
     z-index: 3;
-    font-family: 'Roboto Mono', monospace;
 }
 
 .cta-button.primary::after {
@@ -1068,7 +1066,6 @@ nav a:hover {
     font-weight: 700;
     position: relative;
     z-index: 2;
-    font-family: 'Roboto Mono', monospace;
 }
 
 .cta .cta-button:hover {
