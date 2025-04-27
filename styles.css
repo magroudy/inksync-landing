@@ -116,7 +116,7 @@ nav a:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    font-weight: 300;
+    font-weight: 700;
     cursor: pointer;
     transition: var(--transition);
     font-size: 14px;
@@ -532,6 +532,11 @@ nav a:hover {
     color: var(--text-color);
     margin-bottom: 12px;
     font-weight: 300;
+}
+
+/* Add styling for reality-timeline inside cards */
+.card .reality-timeline {
+    margin-top: 15px;
 }
 
 /* Problem Section */
