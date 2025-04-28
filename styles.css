@@ -13,9 +13,9 @@
     --secondary-color: #FFFFFF;
     --accent-color: #07C1DE;
     --finance-bg: #E6EEF2;
-    --finance-bg-dark: #D0DEE6;
-    --text-color: #1A1A1A;
-    --light-text: #444444;
+    --finance-bg-dark: #bfddee;
+    --text-color: #053338;
+    --light-text: #0c4d5e;
     --white: #FFFFFF;
     --gray-50: #F3F8FA;
     --gray-100: #E7F1F5;
@@ -484,7 +484,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(35, 45, 47, 0.8), rgba(234, 234, 234, 0.85)), url('assets/why-assistants.jpeg');
+    background-image: linear-gradient(rgba(99, 120, 130, 0.874), var(--gray-50)), url('assets/why-assistants.jpeg');
     background-size: cover;
     background-position: center;
     opacity: 0.45;
@@ -543,15 +543,15 @@ nav a:hover {
 }
 
 .cards .card:nth-child(1) .card-icon {
-    color: var(--finance-color);
+    color: var(--text-color);
 }
 
 .cards .card:nth-child(2) .card-icon {
-    color: var(--ops-color);
+    color: var(--text-color);
 }
 
 .cards .card:nth-child(3) .card-icon {
-    color: var(--commercial-color);
+    color: var(--text-color);
 }
 
 .card:hover .card-icon {
@@ -2925,4 +2925,37 @@ section.hero a.cta-button.primary:hover span {
 
 .assistant-teams .commercial-icon {
     background-color: transparent;
-} 
+}
+
+/* Card header color overrides */
+.cards .card h3,
+.assistant-list-item h3,
+.differentiator h3 {
+    color: var(--text-color) !important;
+    text-shadow: none !important;
+}
+
+/* Card header color overrides - specific to problem, assistant, and differentiator sections */
+.problem-exists .cards .card h3,
+.assistant-teams .assistant-list-item h3,
+.differentiation .differentiator h3 {
+    color: var(--text-color) !important;
+    text-shadow: none !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+/* Add letter spacing control for regular text content */
+p:not(.subheading):not(.section-subtitle),
+.card p:not(.like-having),
+.column p,
+.step p,
+.differentiator p:not(.like-having),
+.process-text-content p:not(.like-having),
+.reality-text-content p:not(.like-having),
+.assistant-info p:not(.like-having),
+.timeline-content p:not(.like-having),
+.promise-card p,
+nav a,
+.metric-label:not([style*="font-family: 'Roboto Mono'"]):not([style*='font-family: "Roboto Mono"']) {
+    letter-spacing: 0.00em;
+}
