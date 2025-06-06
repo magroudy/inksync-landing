@@ -1,0 +1,54 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Coding Workflow Preferences
+
+- Focus only on areas of code relevant to the task requested
+- Do not touch code unrelated to the current task
+- Write thorough tests for all major functionality
+- Avoid making major architectural changes to working features unless explicitly instructed
+- Consider what other methods and code areas might be affected by changes
+- Make changes incrementally and test after each significant change
+
+# Coding Pattern Preferences
+
+- Always prefer simple solutions over complex ones
+- Avoid code duplication - check for existing similar functionality before adding new code
+- Maintain separate environments for dev, test, and prod
+- Only make changes that are requested or clearly understood
+- When fixing issues, exhaust all options with existing implementation before introducing new patterns
+- If introducing a new pattern, remove the old implementation to avoid duplicate logic
+- Keep codebase clean and organized
+- Avoid files over 200-300 lines of code - refactor when approaching this limit
+- Avoid writing one-off scripts and files - if needed, delete them after use
+
+# Technology Stack
+
+- Use Python for backend development
+- Use HTML/JS for frontend development
+- Use SQL for databases - never switch to JSON file storage
+- Maintain separate databases for dev, test, and prod environments
+- Use hosted ElasticSearch for search functionality
+- Use Python test frameworks for testing
+
+# Data Management
+
+- Do not use mock data for dev or prod environments - only in test environments
+- Never add stubbing or fake data patterns to code affecting dev or prod
+- Do not modify .env files or API keys
+
+# Testing Guidelines
+
+- Prefer end-to-end testing over unit testing where appropriate
+- Ensure tests pass in the correct environment
+- Fix test issues without affecting production code unless necessary
+- Test each feature thoroughly before continuing
+
+# Versioning & Context Management
+
+- Commit code frequently to allow rollbacks
+- Start new chat sessions when context window becomes too large
+- Make narrow, focused requests to the agent
+- Use popular, well-documented technology stacks
