@@ -851,21 +851,24 @@ a {
     
     .metric {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         padding: 1rem;
         width: 100%;
+        text-align: center;
     }
     
     .metric-value {
         margin-bottom: 0.5rem;
         margin-right: 0;
         font-size: 1.1rem;
+        text-align: center;
     }
     
     .metric-label {
         font-size: 0.85rem;
         width: 100%;
         line-height: 1.4;
+        text-align: center;
     }
 }
 
