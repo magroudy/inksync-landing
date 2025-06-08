@@ -279,7 +279,7 @@
             const characters = '0123456789';
             
             // Column settings
-            const fontSize = 16;
+            const fontSize = 12; //distance between characters
             const columns = Math.floor(canvas.width / fontSize);
             
             // Array to track the Y position of each column
@@ -289,11 +289,11 @@
             }
             
             // Text color - using the theme colors for dark background
-            const textColor = 'rgba(255, 255, 255, 0.03)'; // Slightly darker matrix text
+            const textColor = 'rgba(255, 255, 255, 0.1)'; // Slightly darker matrix text
             
             function draw() {
                 // Semi-transparent black to create trail effect
-                ctx.fillStyle = 'rgba(30, 35, 40, 0.2)';
+                ctx.fillStyle = 'rgba(30, 35, 40, 0.3)';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
                 
                 // Set the text color and font
