@@ -1,4 +1,4 @@
 # Redirect all traffic to the main domain
-https://inksync.netlify.app/* https://inksync.ai/:splat 301!
-http://inksync.netlify.app/* https://inksync.ai/:splat 301!
-http://inksync.ai/* https://inksync.ai/:splat 301! 
+https://inksync.netlify.app/* https://inventoryIQ.ai/:splat 301!
+http://inksync.netlify.app/* https://inventoryIQ.ai/:splat 301!
+http://inventoryIQ.ai/* https://inventoryIQ.ai/:splat 301!
