@@ -619,11 +619,28 @@ a {
     margin-bottom: 2rem;
 }
 
+
 .footer-logo {
-    font-size: 1.2rem;
+    font-size: 20px;
     font-weight: 700;
-    color: var(--primary-text);
     letter-spacing: -0.5px;
+    font-family: 'Roboto', sans-serif;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.footer-logo span {
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary-darker) !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: var(--primary-darker) !important;
+    text-transform: uppercase;
 }
 
 .footer-logo span {
